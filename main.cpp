@@ -31,8 +31,10 @@ int main() {
 	std::cout << "Enter action (+, -, /, *, %): ";
 	std::cin >> action;
 
-	std::cout << "Enter second number: ";
-	std::cin >> num2;
+	do {
+		std::cout << "Enter second number: ";
+		std::cin >> num2;
+	} while (action == '/' && num2 == 0);
 
 	if (action == '+') {
 		result = Addition(num1, num2);
